@@ -1,24 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { Button, Icon, Input, Menu, Table } from "semantic-ui-react";
+import { useParams } from "react-router-dom";
+import { Icon, Menu, Table } from "semantic-ui-react";
 import JobAdvertsService from "../services/jobAdvertsService";
 
-export default function JobAdverts() {
+export default function EmployerDetail() {
+
+    let {employerId}= useParams();
+
   const [jobAdverts, setjobAdverts] = useState([]);
 
   useEffect(() => {
     let jobAdvertsService = new JobAdvertsService();
-    jobAdvertsService
-      .getJobAdverts()
+    jobAdvertsService.getJobAdvertsByEmployerId(employerId)
       .then((result) => setjobAdverts(result.data.data));
-  }, []);
+  });
 
   return (
     <div>
-      <div style={{textAlign:"right"}}>
-        <Input name="releaseDate" type="date"  placeholder="Başlangıç Tarihi" />
-        <Input name="deadline" type="date" placeholder="Kapanış Tarihi" />
-        <Button primary>Tarihe Göre Ara..</Button>
-      </div>
       <Table celled>
         <Table.Header>
           <Table.Row>
