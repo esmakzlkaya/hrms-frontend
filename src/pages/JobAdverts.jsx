@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button, Icon, Input, Menu, Table } from "semantic-ui-react";
-import JobAdvertsService from "../services/jobAdvertsService";
+import JobAdvertsService from "../services/jobAdvertService";
 
 export default function JobAdverts() {
   const [jobAdverts, setjobAdverts] = useState([]);
