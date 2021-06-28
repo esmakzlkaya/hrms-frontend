@@ -7,7 +7,7 @@ Visual Studio Code kullanılarak geliştirilmiş bir **React** projesidir.
 
  **UML Component Diagram** 
 
- ![UmlDiagram](https://github.com/esmakzlkaya/hrms-frontend/images/hrmsFrontendUmlDiagram.png)
+ ![UmlDiagram](https://github.com/esmakzlkaya/hrms-frontend/blob/master/images/hrmsFrontendUmlDiagram.png)
 
 
 
